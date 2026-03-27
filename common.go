@@ -4,15 +4,7 @@ import "github.com/InkShaStudio/go-command"
 
 var manifest *PluginManifest
 
-func init() {
-	var manifestFile = "manifest.json"
-
-	data, err := LoadManifestByFile(manifestFile)
-
-	if err != nil {
-		panic(err)
-	}
-
+func LoadManifest(data *PluginManifest) {
 	manifest = data
 }
 
